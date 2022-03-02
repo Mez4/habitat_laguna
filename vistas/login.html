@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>login | Habitat laguna</title>
+    <link rel="stylesheet" href="../estilos/login.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1">
+    <link href="https://file.myfontastic.com/DqhBucJDoXdHMfbHGp9P6j/icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,700|Raleway:300,400" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../imagenes/logo.png">
+  </head>
+  <script>
+  function go(){
+      if(document.form.password.value=='123'&& document.form.login.value=='HL'){
+          document.form.submit();
+    }
+    else {
+      alert("Checa");
+    }
+  }
+  </script>
+  <body>
+    <h1>Ingresa tu usuario y contraseña</h1>
+    <section class="content">
+      <form action="" class="formulario">
+        <p>Usuario</p>
+        <input type="text" name="login" placeholder="Usuario" required autofocus>
+        <p>Contraseña</p>
+        <input type="password" name="password" placeholder="Contraseña" required>
+        <input onclick="go()" href="Tabla.cshtml" id="boton" type="button" value="ENTRAR">
+      </form>
+      <img src="../imagenes/logo.png">
+      <a href="../index.html">Regresar</a>
+    </section>
+  </body>
+</html>

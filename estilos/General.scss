@@ -1,0 +1,26 @@
+$color1: #eee; //blanco
+$color2: #52b12c; //verde
+$color3: #066dbe; //azul
+$color4: #fc7604; //naranja
+$color5: #555;//negro
+$fuente1: 'Raleway', sans-serif;
+$fuente2: 'Nunito', sans-serif;
+$width: 85%;
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background: darken(#fff, 4);
+  overflow-x: hidden;
+}
+.cuerpillo{
+  transform: translate(0, 100px);
+
+  @media (min-width:1020px){
+   transform: translate(0, 80px);
+  }
+}

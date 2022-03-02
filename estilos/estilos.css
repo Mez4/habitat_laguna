@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.title{
+    width: 30%;
+    margin: auto;
+    text-align: center;
+    line-height: 2;    
+    background: rgba(38,158,13,.5);
+}
+.main_menu{
+    background: rgba(224,138,11,.5);
+    margin: auto;
+    width: 60%;
+}
+.menu{
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+}
+.menu li{
+    width: 10%;
+    background: #333;
+    line-height: 2;
+    text-align: center;
+}
+.menu li a{
+    text-decoration: none;
+    color: #eee;
+}
+
+.table tr td:first-child, thead th:first-child{ 
+    display: none;
+} 
+.boton{
+    color: black;
+    display: inline-block;
+    margin: 20px;
+    padding: 10px 0px;
+    text-align: center;
+    text-decoration: none;
+    width: 100px;
+}
+
+th, td{
+    line-height: 2;
+}
+
+.form-group{
+    display: block;
+}

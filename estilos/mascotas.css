@@ -1,0 +1,429 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+body {
+  background: whitesmoke;
+  overflow-x: hidden; }
+
+.cuerpillo {
+  -webkit-transform: translate(0, 100px);
+  -ms-transform: translate(0, 100px);
+  transform: translate(0, 100px); }
+  @media (min-width: 1020px) {
+    .cuerpillo {
+      -webkit-transform: translate(0, 80px);
+      -ms-transform: translate(0, 80px);
+      transform: translate(0, 80px); } }
+
+.header {
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: #eee;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2; }
+  .header .logo {
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100px;
+    width: 90%; }
+    .header .logo img {
+      height: 80px;
+      margin: 0 13px;
+      width: 90px; }
+    .header .logo h1 {
+      font-family: "Nunito", sans-serif;
+      font-size: 1.7em; }
+  .header #checkbox {
+    display: none; }
+  .header #checkbox:checked ~ nav {
+    -webkit-transform: translate(0);
+    -ms-transform: translate(0);
+    transform: translate(0); }
+  .header #checkbox:checked ~ label {
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg); }
+  .header .icn-menu2 {
+    font-size: 1.3em;
+    transition: .3s; }
+  .header nav {
+    background: rgba(238, 238, 238, 0.9);
+    height: 100vh;
+    left: 0;
+    overflow-y: auto;
+    position: absolute;
+    padding-bottom: 100px;
+    top: 100px;
+    -webkit-transform: translate(100%, 0);
+    -ms-transform: translate(100%, 0);
+    transform: translate(100%, 0);
+    transition: .3s;
+    width: 100%; }
+    .header nav .menu {
+      list-style: none;
+      margin: auto;
+      padding: 0;
+      position: relative;
+      text-align: center; }
+      .header nav .menu .submenu {
+        background: #fc7604;
+        color: #eee;
+        cursor: pointer;
+        position: relative; }
+        .header nav .menu .submenu:hover {
+          background: #066dbe; }
+      .header nav .menu li {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+        font-family: "Raleway", sans-serif;
+        line-height: 3;
+        position: relative; }
+        .header nav .menu li a {
+          color: #555;
+          display: block;
+          text-decoration: none; }
+          .header nav .menu li a:hover {
+            background: #066dbe; }
+        .header nav .menu li:last-child {
+          border-right: none; }
+      .header nav .menu .children {
+        display: none;
+        list-style: none;
+        position: relative;
+        width: 100%; }
+        .header nav .menu .children li {
+          background: #52b12c;
+          display: block;
+          overflow: hidden; }
+          .header nav .menu .children li a {
+            color: #eee; }
+  @media (min-width: 1020px) {
+    .header {
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      height: 80px;
+      -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+      justify-content: space-around; }
+      .header nav {
+        top: 80px; } }
+
+.contenedor_productos {
+  background: rgba(252, 118, 4, 0.8);
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  height: auto;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  margin: auto;
+  width: 90%; }
+  .contenedor_productos h2 {
+    width: 100%;
+    font-family: "Raleway", sans-serif;
+    color: #eee;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-shadow: 1px 1px #555, 2px 2px #555, 3px 3px #555, 4px 4px #555, 5px 5px #555, 6px 6px #555, 7px 7px #555, 8px 8px #555;
+    margin: 10px 10px;
+    font-size: 2em;
+    text-align: center; }
+    @media (min-width: 480px) {
+      .contenedor_productos h2 {
+        font-size: 2.5em;
+        text-align: left; } }
+    @media (min-width: 720px) {
+      .contenedor_productos h2 {
+        font-size: 3em; } }
+  .contenedor_productos .producto {
+    background: #eee;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    height: 300px;
+    -webkit-align-content: flex-start;
+    -ms-flex-line-pack: start;
+    align-content: flex-start;
+    margin: 30px 10px;
+    width: 100%; }
+    .contenedor_productos .producto img {
+      overflow: hidden;
+      height: 50%;
+      margin: 20px auto;
+      width: 90%; }
+    .contenedor_productos .producto p {
+      font-family: "Nunito", sans-serif;
+      margin: 5px auto;
+      text-align: center;
+      width: 100%; }
+    @media (min-width: 480px) {
+      .contenedor_productos .producto {
+        margin: 10px;
+        width: calc(100% / 2 - 20px); } }
+    @media (min-width: 720px) {
+      .contenedor_productos .producto {
+        width: calc(100% / 3 - 20px); } }
+    @media (min-width: 1020px) {
+      .contenedor_productos .producto {
+        width: calc(100% / 4 - 20px); } }
+
+.perro {
+  background: #555; }
+
+.ave {
+  background: #fc7604; }
+
+.reptil {
+  background: #52b12c; }
+
+.pez {
+  background: #066dbe; }
+
+.alimentos_aves {
+  background: rgba(213, 99, 3, 0.8); }
+
+.alimentos_perro {
+  background: rgba(65, 65, 65, 0.8); }
+
+.alimentos_reptil {
+  background: rgba(67, 144, 36, 0.8); }
+
+.alimentos_pez {
+  background: rgba(5, 86, 150, 0.8); }
+
+.casas_aves {
+  background: rgba(252, 140, 44, 0.8); }
+
+.casas_perro {
+  background: rgba(105, 105, 105, 0.8); }
+
+.casas_reptil {
+  background: rgba(99, 206, 56, 0.8); }
+
+.casas_pez {
+  background: rgba(7, 132, 230, 0.8); }
+
+.accesoriosaves {
+  background: #fc7604; }
+
+.accesorios_perro {
+  background: #555; }
+
+.accesorios_reptil {
+  background: #52b12c; }
+
+.accesorios_pez {
+  background: #066dbe; }
+
+.r h2 {
+  text-align: right;
+  margin-right: 20px; }
+
+.formulario {
+  margin-top: 10px;
+  background: #f6e752; }
+  .formulario form {
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    padding: 10px 0;
+    width: 100%;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
+  .formulario .mensaje {
+    font-family: "Raleway", sans-serif;
+    height: 100%;
+    width: 90%;
+    color: #434343;
+    margin-bottom: 10px; }
+    @media (min-width: 500px) {
+      .formulario .mensaje {
+        width: 30%; } }
+    .formulario .mensaje .renglon1 {
+      color: #4b4b4b;
+      font-size: .8em; }
+      @media (min-width: 500px) {
+        .formulario .mensaje .renglon1 {
+          font-size: 1.1em; } }
+    .formulario .mensaje .renglon2 {
+      font-size: 1.1em; }
+      @media (min-width: 500px) {
+        .formulario .mensaje .renglon2 {
+          font-size: 1.3em; } }
+    .formulario .mensaje .renglon3 {
+      color: #222222;
+      font-family: "Nunito", sans-serif;
+      font-weight: bold;
+      font-size: .9em; }
+      @media (min-width: 500px) {
+        .formulario .mensaje .renglon3 {
+          font-size: 1.1em; } }
+  .formulario .opciones {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    width: 80%; }
+    @media (min-width: 500px) {
+      .formulario .opciones {
+        width: 50%; } }
+    .formulario .opciones input, .formulario .opciones textarea {
+      border: none;
+      font-family: "Raleway", sans-serif;
+      padding: 5px 10px;
+      color: #776c06; }
+    .formulario .opciones input {
+      width: calc(100% - 6px);
+      margin: 3px; }
+      @media (min-width: 500px) {
+        .formulario .opciones input {
+          width: calc(100% / 3 - 6px); } }
+    .formulario .opciones textarea {
+      margin-top: 5px;
+      max-width: calc(100% - 6px);
+      width: 100%; }
+    .formulario .opciones #btn {
+      color: #eee;
+      margin: 15px;
+      padding: 10px 0;
+      background: #a79908;
+      width: 40%;
+      border-radius: 3px;
+      transition: .5s; }
+      .formulario .opciones #btn:hover {
+        color: #066dbe;
+        background: #d5d5d5; }
+
+.pie {
+  background: #555;
+  height: auto;
+  width: 100%; }
+  .pie .contenedor {
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: auto;
+    width: 80%; }
+    .pie .contenedor .logo-pie {
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+      justify-content: space-around;
+      margin: 5px 0;
+      width: 100%; }
+      .pie .contenedor .logo-pie img {
+        height: 100%;
+        width: 15%; }
+      .pie .contenedor .logo-pie p {
+        color: #888888;
+        font-family: "Nunito", sans-serif;
+        font-size: .5em;
+        margin-left: 10px;
+        width: 100%; }
+      @media (min-width: 500px) {
+        .pie .contenedor .logo-pie {
+          width: 50%; }
+          .pie .contenedor .logo-pie img {
+            width: 20%; } }
+      @media (min-width: 720px) {
+        .pie .contenedor .logo-pie {
+          width: 60%; }
+          .pie .contenedor .logo-pie img {
+            width: 10%; }
+          .pie .contenedor .logo-pie p {
+            font-size: .6em; } }
+    .pie .contenedor .social {
+      font-family: "Nunito", sans-serif;
+      margin-left: auto;
+      width: 100%; }
+      .pie .contenedor .social ul {
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-justify-content: flex-end;
+        -ms-flex-pack: end;
+        justify-content: flex-end;
+        list-style: none; }
+        .pie .contenedor .social ul li {
+          font-size: 1.2em;
+          margin-left: 100px; }
+          .pie .contenedor .social ul li a {
+            color: #888888;
+            text-decoration: none; }
+          .pie .contenedor .social ul li .icn-fb:hover {
+            color: #3b5999; }
+          .pie .contenedor .social ul li .icn-tweet:hover {
+            color: #55acee; }
+          .pie .contenedor .social ul li .icn-insta:hover {
+            color: #e4405f; }
+      .pie .contenedor .social p {
+        color: #888888;
+        font-size: .6em;
+        line-height: 1.3;
+        margin: 10px 0;
+        text-align: center; }
+        .pie .contenedor .social p span {
+          font-size: 1.2em; }
+      @media (min-width: 500px) {
+        .pie .contenedor .social {
+          text-align: right;
+          width: 40%;
+          margin-top: 30px; }
+          .pie .contenedor .social ul li {
+            margin-left: 60px; } }
+      @media (min-width: 720px) {
+        .pie .contenedor .social {
+          margin-top: none; }
+          .pie .contenedor .social ul li {
+            margin-left: 100px; }
+          .pie .contenedor .social p {
+            text-align: right; } }

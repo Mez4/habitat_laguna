@@ -1,0 +1,318 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+body {
+  background: whitesmoke;
+  overflow-x: hidden; }
+
+.cuerpillo {
+  -webkit-transform: translate(0, 100px);
+  -ms-transform: translate(0, 100px);
+  transform: translate(0, 100px); }
+  @media (min-width: 1020px) {
+    .cuerpillo {
+      -webkit-transform: translate(0, 80px);
+      -ms-transform: translate(0, 80px);
+      transform: translate(0, 80px); } }
+
+.header {
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: #eee;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2; }
+  .header .logo {
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100px;
+    width: 90%; }
+    .header .logo img {
+      height: 80px;
+      margin: 0 13px;
+      width: 90px; }
+    .header .logo h1 {
+      font-family: "Nunito", sans-serif;
+      font-size: 1.7em; }
+  .header #checkbox {
+    display: none; }
+  .header #checkbox:checked ~ nav {
+    -webkit-transform: translate(0);
+    -ms-transform: translate(0);
+    transform: translate(0); }
+  .header #checkbox:checked ~ label {
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg); }
+  .header .icn-menu2 {
+    font-size: 1.3em;
+    transition: .3s; }
+  .header nav {
+    background: rgba(238, 238, 238, 0.9);
+    height: 100vh;
+    left: 0;
+    overflow-y: auto;
+    position: absolute;
+    padding-bottom: 100px;
+    top: 100px;
+    -webkit-transform: translate(100%, 0);
+    -ms-transform: translate(100%, 0);
+    transform: translate(100%, 0);
+    transition: .3s;
+    width: 100%; }
+    .header nav .menu {
+      list-style: none;
+      margin: auto;
+      padding: 0;
+      position: relative;
+      text-align: center; }
+      .header nav .menu .submenu {
+        background: #fc7604;
+        color: #eee;
+        cursor: pointer;
+        position: relative; }
+        .header nav .menu .submenu:hover {
+          background: #066dbe; }
+      .header nav .menu li {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+        font-family: "Raleway", sans-serif;
+        line-height: 3;
+        position: relative; }
+        .header nav .menu li a {
+          color: #555;
+          display: block;
+          text-decoration: none; }
+          .header nav .menu li a:hover {
+            background: #066dbe; }
+        .header nav .menu li:last-child {
+          border-right: none; }
+      .header nav .menu .children {
+        display: none;
+        list-style: none;
+        position: relative;
+        width: 100%; }
+        .header nav .menu .children li {
+          background: #52b12c;
+          display: block;
+          overflow: hidden; }
+          .header nav .menu .children li a {
+            color: #eee; }
+  @media (min-width: 1020px) {
+    .header {
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      height: 80px;
+      -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+      justify-content: space-around; }
+      .header nav {
+        top: 80px; } }
+
+.caja-productos {
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 8.4% auto;
+  width: 90%; }
+  .caja-productos .productos {
+    background-position: center;
+    background-size: cover;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    height: 270px;
+    margin: 5px 5px;
+    position: relative;
+    width: 270px; }
+    .caja-productos .productos::before {
+      content: "";
+      height: 100%;
+      position: absolute;
+      transition: all .5s ease-in-out;
+      width: 100%; }
+    .caja-productos .productos .titulo, .caja-productos .productos .description {
+      color: #eee;
+      position: absolute;
+      text-align: center;
+      width: 100%; }
+    .caja-productos .productos .titulo {
+      font-family: "Nunito", sans-serif;
+      font-size: 2em;
+      margin-top: 30px;
+      transition: all .3s ease-in-out; }
+    .caja-productos .productos .description {
+      font-family: "Raleway", sans-serif;
+      margin-top: 200px;
+      transition: all .7s ease-in-out; }
+    .caja-productos .productos .icono {
+      font-size: 4em;
+      height: 100px;
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      text-align: center;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      transition: all .5s ease-in-out;
+      width: 100px; }
+
+.peces {
+  background: url(../imagenes/perros.jpg); }
+  .peces::before {
+    background: rgba(85, 85, 85, 0.7); }
+  .peces:hover:before {
+    background: rgba(85, 85, 85, 0.4); }
+
+.reptiles {
+  background: url(../imagenes/cat.jpg); }
+  .reptiles::before {
+    background: rgba(252, 118, 4, 0.7); }
+  .reptiles:hover:before {
+    background: rgba(252, 118, 4, 0.4); }
+
+.aves {
+  background: url(../imagenes/conejo.jpeg); }
+  .aves::before {
+    background: rgba(252, 118, 4, 0.7); }
+  .aves:hover:before {
+    background: rgba(252, 118, 4, 0.4); }
+
+.mamiferos {
+  background: url(../imagenes/roedor.jpeg); }
+  .mamiferos::before {
+    background: rgba(85, 85, 85, 0.7); }
+  .mamiferos:hover:before {
+    background: rgba(85, 85, 85, 0.4); }
+
+.cuerpillo {
+  position: relative; }
+
+.pie {
+  background: #555;
+  height: auto;
+  width: 100%; }
+  .pie .contenedor {
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: auto;
+    width: 80%; }
+    .pie .contenedor .logo-pie {
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+      justify-content: space-around;
+      margin: 5px 0;
+      width: 100%; }
+      .pie .contenedor .logo-pie img {
+        height: 100%;
+        width: 15%; }
+      .pie .contenedor .logo-pie p {
+        color: #888888;
+        font-family: "Nunito", sans-serif;
+        font-size: .5em;
+        margin-left: 10px;
+        width: 100%; }
+      @media (min-width: 500px) {
+        .pie .contenedor .logo-pie {
+          width: 50%; }
+          .pie .contenedor .logo-pie img {
+            width: 20%; } }
+      @media (min-width: 720px) {
+        .pie .contenedor .logo-pie {
+          width: 60%; }
+          .pie .contenedor .logo-pie img {
+            width: 10%; }
+          .pie .contenedor .logo-pie p {
+            font-size: .6em; } }
+    .pie .contenedor .social {
+      font-family: "Nunito", sans-serif;
+      margin-left: auto;
+      width: 100%; }
+      .pie .contenedor .social ul {
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-justify-content: flex-end;
+        -ms-flex-pack: end;
+        justify-content: flex-end;
+        list-style: none; }
+        .pie .contenedor .social ul li {
+          font-size: 1.2em;
+          margin-left: 100px; }
+          .pie .contenedor .social ul li a {
+            color: #888888;
+            text-decoration: none; }
+          .pie .contenedor .social ul li .icn-fb:hover {
+            color: #3b5999; }
+          .pie .contenedor .social ul li .icn-tweet:hover {
+            color: #55acee; }
+          .pie .contenedor .social ul li .icn-insta:hover {
+            color: #e4405f; }
+      .pie .contenedor .social p {
+        color: #888888;
+        font-size: .6em;
+        line-height: 1.3;
+        margin: 10px 0;
+        text-align: center; }
+        .pie .contenedor .social p span {
+          font-size: 1.2em; }
+      @media (min-width: 500px) {
+        .pie .contenedor .social {
+          text-align: right;
+          width: 40%;
+          margin-top: 30px; }
+          .pie .contenedor .social ul li {
+            margin-left: 60px; } }
+      @media (min-width: 720px) {
+        .pie .contenedor .social {
+          margin-top: none; }
+          .pie .contenedor .social ul li {
+            margin-left: 100px; }
+          .pie .contenedor .social p {
+            text-align: right; } }
+
+.contenedor_pie {
+  position: absolute;
+  top: 191%;
+  width: 100%;
+  -webkit-align-self: flex-end;
+  -ms-flex-item-align: end;
+  align-self: flex-end; }

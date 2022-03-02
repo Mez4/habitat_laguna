@@ -1,0 +1,230 @@
+@import "General.scss";
+@import "header.scss";
+  .login{
+    text-decoration: none;
+    color: rgba($color5,.7);
+    font-family: $fuente2;
+    margin: 0 15px;
+    span{
+      color: $color3;
+    }
+  }
+.banner{
+  background: darken($color1, 3);
+  height: auto;
+  margin: 0 0 40px 0;
+  padding: 0 0 50px 0;
+  position: relative;
+  width: 100%;
+  &_things{
+    border: none;
+    margin: 10px auto;
+    position: relative;
+    width: $width;
+  }
+  &_title{
+    font-family: $fuente1;
+    font-size: .95em;
+    line-height: 1;
+    margin-bottom: 3px;
+    span{
+      font-family: $fuente2;
+      font-size: 1.2em;
+    }
+  }
+  &_description{
+    font-family: $fuente1;
+    font-size: .80em
+  }
+  a{
+    background: lighten($color4, 10);
+    border-radius: 5px;
+    color:$color1;
+    font-size: .8em;
+    font-family: $fuente1;
+    height: 20px;
+    line-height: 20px;
+    margin: 15px;
+    position: absolute;
+    right: 6px;
+    text-align: center;
+    text-decoration: none;
+    width: 80px;
+    display: none;
+  }
+  @media (min-width:1020px){
+    align-items: center;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+  img{
+    width: 45%;
+  }
+  .banner_things{
+    background: darken(#fff, 7);
+    border: 2px solid $color5;
+    border-radius: 1em 0 0 1em;
+    border-right: none;
+    display: block;
+    height: 220px;
+    padding-top: 2em;
+    padding-left: 2em;
+    width: 70%;
+    .banner_title{
+      font-size: 1.2em;
+    }
+    .banner_description{
+      font-size: .9em;
+      line-height: 1.4;
+      position: absolute;
+      width: 70%;
+
+    }
+    a{
+      bottom: 10px;
+    font-size: .9em;
+      height: 40px;
+      line-height:40px;
+      position: absolute;
+      right: 90px;
+      width: 120px;
+      &:hover{
+        background: $color3;
+      }
+    }
+  }
+  }
+}
+.about-us{
+  align-items: center;
+  display: flex;
+  background-image: url(../imagenes/login.jpeg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  flex-wrap: wrap;
+  font-family: $fuente2;
+  font-size: .7em;
+  justify-content: center;
+  height: 170px;
+  margin-bottom: 30px;
+  .parrafo{
+    margin: 20px auto;
+    width: 100%;
+    text-align: center;
+    font-size: 2em;
+    color: #fff;
+
+  }
+}
+.caja-productos{
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+  margin-bottom: 40px;
+  width: 90%;
+  background: darken($color1, 4);
+  h2{
+    color: $color4;
+    width: 100%;
+    font-family: $fuente2;
+    text-align: center;
+    margin: 10px 0;
+    @media (min-width: 1200px){
+      font-size: 2em;
+    }
+  }
+.productos{
+  background-position: center;
+  background-size: cover;
+  flex-wrap: wrap;
+  height: 270px;
+  margin: 10px 5px 30px 5px;
+  position: relative;
+  width: 270px;
+  &::before{
+    content: "";
+    height: 100%;
+    position: absolute;
+    transition: all .3s ease-in-out;
+    transition: all .5s ease-in-out;
+    width: 100%;
+  }
+  .titulo, .description{
+    color:$color1;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+  }
+  .titulo{
+    font-family: $fuente2;
+    font-size: 2em;
+    margin-top: 30px;
+    transition: all .3s ease-in-out;
+  }
+  .description{
+    font-family: $fuente1;
+    margin-top: 200px;
+    transition: all .7s ease-in-out;
+  }
+  .icono{
+    font-size: 4em;
+    height: 100px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    transition: all .5s ease-in-out;
+    width: 100px;
+  }
+}
+}
+.peces{
+  background: url(../imagenes/peces.jpeg);
+  &::before{
+    background: rgba($color3, .7);
+  }
+  &:hover{
+    &:before{
+    background: rgba($color3, .4);
+    }
+  }
+}
+.reptiles{
+  background: url(../imagenes/reptil.jpeg);
+  &::before{
+    background: rgba($color2, .7);
+  }
+  &:hover{
+    &:before{
+    background: rgba($color2, .4);
+    }
+  }
+}
+.aves{
+  background: url(../imagenes/ave.jpeg);
+  &::before{
+    background: rgba($color4, .7);
+  }
+  &:hover{
+    &:before{
+    background: rgba($color4, .4);
+    }
+  }
+}
+.mamiferos{
+  background: url(../imagenes/perro.jpg);
+  &::before{
+    background: rgba($color5, .7);
+  }
+  &:hover{
+    &:before{
+    background: rgba($color5, .4);
+    }
+  }
+  }
+@import "Pie.scss";

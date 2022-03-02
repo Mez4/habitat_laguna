@@ -1,0 +1,109 @@
+@import "General.scss";
+@import "header.scss";
+
+.caja-productos{
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 8.4% auto;
+  width: 90%;
+.productos{
+  background-position: center;
+  background-size: cover;
+  flex-wrap: wrap;
+  height: 270px;
+  margin: 5px 5px;
+  position: relative;
+  width: 270px;
+  &::before{
+    content: "";
+    height: 100%;
+    position: absolute;
+    transition: all .5s ease-in-out;
+    width: 100%;
+  }
+  .titulo, .description{
+    color:$color1;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+  }
+  .titulo{
+    font-family: $fuente2;
+    font-size: 2em;
+    margin-top: 30px;
+    transition: all .3s ease-in-out;
+  }
+  .description{
+    font-family: $fuente1;
+    margin-top: 200px;
+    transition: all .7s ease-in-out;
+  }
+  .icono{
+    font-size: 4em;
+    height: 100px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    transition: all .5s ease-in-out;
+    width: 100px;
+  }
+}
+}
+.peces{
+  background: url(../imagenes/perros.jpg);
+  &::before{
+    background: rgba($color5, .7);
+  }
+  &:hover{
+    &:before{
+    background: rgba($color5, .4);
+    }
+  }
+}
+.reptiles{
+  background: url(../imagenes/cat.jpg);
+  &::before{
+    background: rgba($color4, .7);
+  }
+  &:hover{
+    &:before{
+    background: rgba($color4, .4);
+    }
+  }
+}
+.aves{
+  background: url(../imagenes/conejo.jpeg);
+  &::before{
+    background: rgba($color4, .7);
+  }
+  &:hover{
+    &:before{
+    background: rgba($color4, .4);
+    }
+  }
+}
+.mamiferos{
+  background: url(../imagenes/roedor.jpeg);
+  &::before{
+    background: rgba($color5, .7);
+  }
+  &:hover{
+    &:before{
+    background: rgba($color5, .4);
+    }
+  }
+  }
+  .cuerpillo{
+    position: relative;
+  }
+@import "Pie.scss";
+.contenedor_pie{
+  position: absolute;
+  top: 191%;
+  width: 100%;
+  align-self: flex-end;
+}

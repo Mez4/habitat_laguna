@@ -1,0 +1,217 @@
+@import "General.scss";
+@import "header.scss";
+.contenedor_productos{
+  background: rgba($color4, .8);
+  display: flex;
+  flex-wrap: wrap;
+  height: auto;
+  justify-content: flex-start;
+  margin: auto;
+  width: 90%;
+  h2{
+    width: 100%;
+    font-family: $fuente1;
+    color: $color1;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-shadow: 1px 1px $color5,
+                 2px 2px $color5,
+                 3px 3px $color5,
+                 4px 4px $color5,
+                 5px 5px $color5,
+                 6px 6px $color5,
+                 7px 7px $color5,
+                 8px 8px $color5;
+    margin: 10px 10px;
+    font-size: 2em;
+    text-align: center;
+
+    @media(min-width: 480px){
+      font-size: 2.5em;
+      text-align: left;
+    }
+    @media(min-width: 720px){
+      font-size: 3em;
+    }
+  }
+  .producto{
+    background: $color1;
+    display: flex;
+    flex-wrap: wrap;
+    height: 300px;
+    align-content: flex-start;
+    margin: 30px 10px;
+    width: 100%;
+    img{
+      overflow: hidden;
+      height: 50%;
+      margin: 20px auto;
+      width: 90%;
+    }
+    p{
+      font-family: $fuente2;
+      margin: 5px auto;
+      text-align: center;
+      width: 100%;
+    }
+    @media (min-width: 480px) {
+      margin: 10px;
+      width: calc(100% / 2 - 20px);
+    }
+    @media (min-width: 720px){
+      width: calc(100% / 3 - 20px);
+    }
+    @media (min-width: 1020px){
+      width: calc(100% / 4 - 20px);
+    }
+
+  }
+}
+.perro{
+  background: $color5;
+}
+.ave{
+  background: $color4;
+}
+.reptil{
+  background: $color2;
+}
+.pez{
+  background: $color3;
+}
+.alimentos{
+  &_aves{
+    background: rgba(darken($color4, 8), .8);
+  }
+  &_perro{
+    background: rgba(darken($color5, 8), .8);
+  }
+  &_reptil{
+    background: rgba(darken($color2, 8), .8);
+  }
+  &_pez{
+    background: rgba(darken($color3, 8), .8);
+  }
+}
+.casas{
+  &_aves{
+    background: rgba(lighten($color4, 8), .8);
+  }
+  &_perro{
+    background: rgba(lighten($color5, 8), .8);
+  }
+  &_reptil{
+    background: rgba(lighten($color2, 8), .8);
+  }
+  &_pez{
+    background: rgba(lighten($color3, 8), .8);
+  }
+}
+.accesorios{
+  &aves{
+    background: $color4;
+  }
+  &_perro{
+    background: $color5;
+  }
+  &_reptil{
+    background: $color2;
+  }
+  &_pez{
+    background: $color3;
+  }
+
+}
+.r{
+  h2{
+  text-align: right;
+  margin-right: 20px;
+  }
+}
+.formulario{
+  margin-top: 10px;
+  background: lighten(#F0DB0C, 15);
+  form{
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .mensaje{
+    font-family: $fuente1;
+    height: 100%;
+    width: 90%;
+    color: darken($color5, 7);
+    margin-bottom: 10px;
+    @media (min-width:500px){
+      width: 30%;
+    }
+
+    & .renglon1{
+      color: darken($color5, 4);
+      font-size: .8em;
+      @media (min-width:500px){
+        font-size: 1.1em;
+      }
+    }
+    & .renglon2{
+      font-size: 1.1em;
+      @media (min-width:500px){
+        font-size: 1.3em;
+      }
+    }
+    & .renglon3{
+      color: darken($color5, 20);
+      font-family: $fuente2;
+      font-weight: bold;
+      font-size: .9em;
+      @media (min-width:500px){
+        font-size: 1.1em;
+      }
+    }
+  }
+  .opciones{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 80%;
+    @media (min-width:500px){
+      width: 50%;
+    }
+    input, textarea{
+      border: none;
+      font-family: $fuente1;
+      padding: 5px 10px;
+      color: darken(#F0DB0C, 25);
+    }
+    input{
+      width: calc(100% - 6px);
+      margin: 3px;
+      @media (min-width: 500px){
+        width: calc(100% / 3 - 6px);
+      }
+    }
+    textarea{
+      margin-top: 5px;
+      max-width: calc(100% - 6px);
+      width: 100%;
+    }
+    #btn{
+      color: $color1;
+      margin: 15px;
+      padding: 10px 0;
+      background: darken(#F0DB0C, 15);
+      width: 40%;
+      border-radius: 3px;
+      transition: .5s;
+      &:hover{
+        color: $color3;
+        background: darken($color1, 10);
+      }
+    }
+  }
+}
+  @import "Pie.scss";

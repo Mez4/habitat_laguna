@@ -1,0 +1,41 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	background: #8664FF;
+}
+.titulo{
+	margin-top: 30px;
+	background: rgba(0,0,0, .5);
+	padding: 15px 0;
+	width: 100%;
+}
+.titulo h3{
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	color: #fff;
+	font-size: 1.4em;
+	text-align: center;
+}
+.table{
+	border-collapse: collapse;
+	border: 1px solid #fff;
+	overflow: hidden;
+	width: 70%;
+	border-radius: 10px 10px 0 0;
+}
+thead{
+	background: #333;
+}
+thead td{
+	border-right: 1px solid #fff;
+}
+thead td:last-child{
+	border-right: none;
+}

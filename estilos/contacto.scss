@@ -1,0 +1,95 @@
+@import "General.scss";
+@import "header.scss";
+
+.cuerpillo{
+  background-image: url("../imagenes/contacto.jpeg");
+  background-size: cover;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  background-position: -250px;
+  justify-content: space-between;
+  align-items: center;
+  @media (min-width: 720px){
+    background-position: 0 -50px;
+    height: 88.5vh;
+  }
+  .formulario{
+    width: 80%;
+    margin: auto;
+    height: 80%;
+    display: flex;
+    @media(min-width: 1000px){
+      width: 60%;
+    }
+
+    form{
+      height: 90%;
+      width: 80%;
+      margin: 15px auto;
+      background: rgba(#fff,.7);
+      .opciones{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 15px;
+        input, textarea{
+          background: rgba(lighten($color4, 20), .7);
+          line-height: 2;
+          color: #fff;
+          font-family: $fuente2;
+          border:none;
+          margin: 15px 0;
+          width: 100%;
+          padding: 2px 5px;
+        }
+        #btn{
+          width: 30%;
+          margin: auto;
+        }
+      }
+    }
+  }
+  .local_redes{
+    height: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    width: 80%;
+    @media(min-width: 1000px){
+      width: 40%;
+    }
+      .mapa{
+
+        width: 80%;
+        margin: auto;
+        height: 50%;
+        padding-bottom: 10px
+      }
+      .social{
+        width: 80%;
+        margin: 20px auto;
+        padding-top: 10px;
+        border-top: 2px solid #333;
+        ul{
+          list-style: none;
+          display: flex;
+          justify-content: space-around;
+          li{
+            a{
+              text-decoration: none;
+              color: #fff;
+              font-size: 1.4em;
+            }
+          }
+        }
+        p{
+          font-family: $fuente1;
+          width: 100%;
+          margin: auto;
+          color: #fff;
+          text-align: center;
+        }
+      }
+    }
+  }

@@ -1,0 +1,122 @@
+@import "General.scss";
+@import"header.scss";
+.mvv_contenedor{
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  width: 90%;
+  .caja{ //estilos generales movil
+    padding: 10px;
+    margin: 4px 2px;
+      p, ul li{
+        font-family: $fuente1;
+      }
+      h4{
+        font-size: 1.4em;
+        font-family: $fuente2;
+      }
+  }
+  .mision{
+    background: rgba($color3, .7);
+    img{
+      display: none;
+    }
+  }
+  .vision{
+    background: rgba($color2, .7);
+  }
+  .valores{
+    background: rgba($color4, .7);
+    ul{
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      li{
+        margin: 20px 0;
+        text-align: center;
+        width: 100%;
+        @media(min-width: 1020px){
+          width: 25%;
+          flex:auto;
+        }
+      }
+    }
+  }
+  @media (min-width: 1020px) { //convierte todo en bloques en celular
+    .caja{ //estilos generales, tamaño a todos los titulos y parrafos
+      h4{
+        font-size: 2em;
+        width: 100%;
+      }
+
+    }
+    .mision{
+      display: flex;
+      flex-wrap: wrap;
+      width: calc(50% - 2px);
+      line-height: 3;
+
+      img{
+        margin: auto;
+        display: block;
+        height: 40%;
+        width: 40%;
+      }
+    }
+    .vision{
+      height: calc(400px / 2 - 2px);
+    }
+    .valores{
+      height: calc(400px / 2 - 2px);
+    }
+    .vv{
+      width: calc(50% - 2px);
+    }
+  }
+}
+.secciones{
+  align-items: center;
+  background-image: url(../imagenes/contacto.jpeg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: space-around;
+  margin: 1.5em auto;
+  padding: 3em;
+  width: 90%;
+  p{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+    font-family: $fuente2;
+    font-size: 3em;
+  }
+}
+.sect2col{
+  width: 95%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  .col{
+    width: 100%;
+    img{
+      width: 100%;
+    }
+  }
+    @media (min-width: 1020px) {
+      flex-wrap: nowrap;
+      margin: auto;
+      width: 90%;
+    .col{
+      margin: 2em 2.5px;
+      width: 100%;
+      img{
+        display: flex;
+        width: 100%;
+      }
+    }
+  }
+}
+@import "Pie.scss";

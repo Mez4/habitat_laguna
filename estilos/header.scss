@@ -1,0 +1,112 @@
+.header{
+  align-items: center;
+  background: $color1;
+  display: flex;
+  flex-wrap: wrap;
+  left: 0;
+  position: fixed;
+  top:0;
+  width: 100%;
+  z-index: 2;
+
+  .logo{
+    align-items: center;
+    display: flex;
+    height: 100px;
+    width: 90%;
+    img{
+      height: 80px;
+      margin: 0 13px;
+      width: 90px;
+    }
+    h1{
+      font-family: $fuente2;
+      font-size: 1.7em;
+    }
+  }
+
+  #checkbox{
+    display: none;
+
+  }
+  #checkbox:checked ~ nav{
+    transform: translate(0);
+  }
+  #checkbox:checked ~ label{
+    transform: rotate(90deg);
+  }
+  .icn-menu2{
+    font-size: 1.3em;
+    transition: .3s;
+  }
+  nav {
+    background: rgba($color1, .9);
+    height: 100vh;
+    left: 0;
+    overflow-y: auto;
+    position: absolute;
+    padding-bottom:100px;
+    top:100px;
+    transform: translate( 100%, 0);
+    transition: .3s;
+    width: 100%;
+
+  .menu{
+    list-style: none;
+    margin: auto;
+    padding: 0;
+    position: relative;
+    text-align: center;
+    .submenu{
+      background: $color4;
+      color: $color1;
+      cursor: pointer;
+      position: relative;
+      &:hover{
+        background: $color3;
+      }
+      }
+      li {
+        border-bottom:1px solid rgba(#fff, .7);
+        font-family: $fuente1;
+        line-height: 3;
+        position: relative;
+        a {
+          color: $color5;
+          display: block;
+          text-decoration: none;
+            &:hover{
+              background: $color3;
+            }
+          }
+          &:last-child{
+              border-right: none;
+            }
+        }
+        .children {
+          display: none;
+          list-style: none;
+          position: relative;
+          width: 100%;
+
+          li{
+            background: $color2;
+            display: block;
+            overflow: hidden;
+            a {
+              color: $color1;
+            }
+        }
+        }
+      }
+    }
+
+  @media (min-width:1020px){
+    display: flex;
+    height: 80px;
+    justify-content: space-around;
+    nav{
+      top: 80px;
+    }
+  }
+}
